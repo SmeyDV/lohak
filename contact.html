@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --main-color: #0A283F;
+            --accent-color: #FFD700;
+            --text-light: #FFFFFF;
+            --text-dark: #333333;
+            --bg-light: #F8F9FA;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        .navbar {
+            background-color: var(--main-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* header */
+
+        .contact-header {
+            background: linear-gradient(135deg, #0A283F, #1E5C8B);
+            color: var(--text-light);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .contact-header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .contact-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            padding: 80px 0;
+        }
+
+        .contact-form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+
+        .contact-form h2 {
+            color: var(--main-color);
+            margin-bottom: 30px;
+        }
+
+        .form-control {
+            border: 1px solid #e1e1e1;
+            border-radius: 5px;
+            padding: 12px;
+        }
+
+        .btn-submit {
+            background-color: var(--accent-color);
+            border: none;
+            color: var(--main-color);
+            font-weight: 600;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--main-color);
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            background-color: var(--main-color);
+            border-radius: 10px;
+            color: var(--text-light);
+            padding: 40px;
+        }
+
+        .contact-info h2 {
+            color: var(--accent-color);
+            margin-bottom: 30px;
+        }
+
+        .contact-info-item {
+            margin-bottom: 30px;
+        }
+
+        .contact-info-item i {
+            color: var(--accent-color);
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        footer {
+            background-color: #061824;
+            padding: 50px 0;
+            color: var(--text-light);
+        }
+
+        footer h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        footer p,
+        footer ul {
+            font-size: 1rem;
+            color: #adb5bd;
+        }
+
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+
+        .footer-bottom {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Contact</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutpage.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <header class="contact-header">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>We're here to answer any questions you may have about our products, services, or company. Reach out to us
+                and we'll respond as soon as we can.</p>
+        </div>
+    </header>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <div class="contact-form">
+                        <h2>Send Us a Message</h2>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>315 Street, TK , Phnom Penh, Cambodia</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (855) 456-7890</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>lohak@mywebsite.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Monday - Friday: 9am - 5pm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- map -->
+    <section class="map">
+        <div class="container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.573492945606!2d104.89540131114863!3d11.582402688572213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109517bf7757d23%3A0x965c34888684bf1!2z4Z6f4Z624Z6A4Z6b4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6b4Z-Q4Z6Z4Z6i4Z6T4Z-S4Z6P4Z6a4Z6H4Z624Z6P4Z634Z6V4Z624Z6a4Z-J4Z624Z6g4Z-S4Z6C4Z6T!5e0!3m2!1skm!2skh!4v1721746200099!5m2!1skm!2skh"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h3>About Us</h3>
+                    <p>We are dedicated to providing high-quality Cambodian handcrafts while supporting local artisans
+                        and promoting fair trade practices.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3>Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="aboutpage.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h3>Contact Us</h3>
+                    <p>Email: lohak@example.com</p>
+                    <p>Phone: +855 12 345 678</p>
+                </div>
+            </div>
+            <div class="footer-bottom text-center">
+                <p>&copy; 2024 Lohak Handcraft Market. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome CDN for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>
