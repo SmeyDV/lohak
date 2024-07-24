@@ -54,9 +54,12 @@
 
       /* Header */
       .header {
-        background: rgb(249, 223, 223);
+        background-color: #29398e;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         color: black;
-        height: 400px;
+        height: 339px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -65,17 +68,19 @@
       }
 
       .header h1 {
-        font-size: 3rem;
+        font-size: 4rem;
+        color: var(--accent-color);
       }
 
       .header p {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        color: var(--accent-color);
       }
 
       /* About Section */
       #about {
         padding: 60px 0;
-        background-color: #f7f7f7;
+        background-color: #787575;
       }
 
       #about .card {
@@ -87,11 +92,32 @@
       #about .card h5 {
         font-size: 1.8rem;
       }
+      /* Our Mission*/
+      .mission-section {
+        background-color: #f8f9fa;
+        padding: 40px 0px;
+      }
+
+      .mission-section h2{
+        font-size: 42px;
+      }
+      .mission-icon {
+        font-size: 80px;
+        color:black;
+      }
+      .mission-title {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+      .mission-description {
+        margin-top: 10px;
+        color: #6c757d;
+      }
 
       /* Team Section */
       #team {
         padding: 80px 0;
-        background-color: white;
+        background-color: rgb(235, 235, 235);
       }
 
       #team h2 {
@@ -217,8 +243,47 @@
       </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="text-center py-5">
+    <!-- Our misson -->
+    <section class="mission-section text-center">
+      <div class="container">
+        <h2 class="mb-5">Our Mission</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="mission-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="mission-title">Sustainability</div>
+            <div class="mission-description">
+              We are committed to sustainable practices that protect the
+              environment.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mission-icon">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <div class="mission-title">Community</div>
+            <div class="mission-description">
+              Our goal is to give back to the community and support local
+              initiatives.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="mission-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="mission-title">Innovation</div>
+            <div class="mission-description">
+              We strive to innovate and lead in our industry with cutting-edge
+              solutions.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- Team Section -->
+     <section id="team" class="text-center py-5">
       <div class="container">
         <h2 class="mb-5">Meet Our Team</h2>
         <div class="row g-4">
@@ -274,7 +339,6 @@
         </div>
       </div>
     </section>
-
     <!-- Footer -->
     <footer class="py-5">
       <div class="container">

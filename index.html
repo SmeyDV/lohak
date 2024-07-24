@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lohak Handcraft Market</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <!-- Bootstrap CSS CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Custom CSS -->
     <style>
       :root {
         --main-color: #0a283f;
@@ -36,7 +34,7 @@
       h6 {
         color: var(--main-color);
       }
-      /* Navbar */
+
       .navbar {
         background-color: var(--main-color);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -58,7 +56,7 @@
         color: var(--accent-color);
       }
 
-      .navbar-nav .btn-outline-light.me-2:hover {
+      .navbar-nav .btn-outline-light:hover {
         background-color: var(--main-color);
         border-color: var(--accent-color);
       }
@@ -83,7 +81,6 @@
         border-color: darken(var(--accent-color), 10%);
       }
 
-      /* Center Search Form */
       .navbar-collapse {
         display: flex;
         justify-content: space-between;
@@ -100,8 +97,6 @@
         order: 2;
         flex-grow: 0;
       }
-
-      /* Search form */
       .navbar-nav .form-control {
         border-radius: 0.25rem;
       }
@@ -116,13 +111,12 @@
         border-color: var(--accent-color);
       }
 
-      /* Adjust buttons' alignment on mobile and tablet */
       @media (max-width: 991.98px) {
         .navbar-collapse .d-flex {
           display: none;
         }
         .navbar-nav {
-          text-align: center; /* Center align the text */
+          text-align: center;
           width: 100%;
         }
         .navbar-nav .nav-item {
@@ -130,21 +124,19 @@
         }
         .navbar-nav .btn-outline-light,
         .navbar-nav .btn-primary {
-          width: auto; /* Adjust width to auto */
-          margin: 0.5rem auto; /* Center and add spacing */
-          display: block; /* Ensure buttons are block elements */
+          width: auto;
+          margin: 0.5rem auto;
+          display: block;
         }
       }
 
-      /* Adjust buttons' width on larger screens */
       @media (min-width: 992px) {
         .navbar-nav .btn-outline-light,
         .navbar-nav .btn-primary {
-          width: auto; /* Default width on larger screens */
+          width: auto;
         }
       }
 
-      /* Header */
       .jumbotron {
         background-size: cover;
         background-position: center;
@@ -203,7 +195,6 @@
         box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
       }
 
-      /* Features Section */
       #features {
         padding: 80px 0;
         background-color: #f8f9fa;
@@ -226,7 +217,6 @@
         color: #6c757d;
       }
 
-      /* About Section */
       #about {
         padding: 80px 0;
         background-color: var(--main-color);
@@ -255,31 +245,30 @@
       }
 
       #about .btn {
-        margin-top: 1rem; /* Ensure some space above the button */
+        margin-top: 1rem;
       }
 
       @media (max-width: 991.98px) {
         #about .row {
-          flex-direction: column; /* Stack the columns vertically on tablet and mobile */
+          flex-direction: column;
         }
 
         #about .col-lg-6 {
-          width: 100%; /* Make the columns full width */
-          text-align: center; /* Center-align text and button */
+          width: 100%;
+          text-align: center;
         }
 
         #about .btn {
-          width: 90%; /* Make the button almost full width */
-          max-width: 300px; /* Set a maximum width for the button */
-          margin: 1rem auto; /* Center the button with margin */
+          width: 90%;
+          max-width: 300px;
+          margin: 1rem auto;
         }
 
         #about img {
-          margin-top: 1rem; /* Ensure some space above the image */
+          margin-top: 1rem;
         }
       }
 
-      /* Products Section */
       #products {
         padding: 80px 0;
         background-color: #f8f9fa;
@@ -295,13 +284,13 @@
         margin-bottom: 30px;
         color: var(--main-color);
       }
+
       .product-card {
         border: none;
         transition: transform 0.3s ease;
         margin-bottom: 20px;
         padding: 10px;
         border-radius: 10px;
-        /* Optional: adds rounded corners */
       }
 
       .product-card:hover {
@@ -336,7 +325,6 @@
         color: var(--main-color);
       }
 
-      /* Blog */
       .part3 {
         background-color: #003b60;
       }
@@ -437,7 +425,6 @@
         color: #003b60;
       }
 
-      /* Contact Section */
       #contact {
         padding: 80px 0;
         background-color: var(--main-color);
@@ -473,7 +460,6 @@
         box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
       }
 
-      /* Footer */
       footer {
         background-color: #061824;
         padding: 50px 0;
@@ -514,13 +500,11 @@
         border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
 
-      /* Animations */
       @keyframes fadeInUp {
         from {
           opacity: 0;
           transform: translate3d(0, 40px, 0);
         }
-
         to {
           opacity: 1;
           transform: translate3d(0, 0, 0);
@@ -532,7 +516,6 @@
       }
     </style>
   </head>
-
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -592,7 +575,7 @@
           Experience the Artistry of Cambodian Handcrafts
         </h1>
         <p class="lead fade-in-up">Discover pure Khmer handcraft products</p>
-        <a href="product.hmtl" class="btn btn-primary btn-lg fade-in-up"
+        <a href="product.html" class="btn btn-primary btn-lg fade-in-up"
           >Explore Our Product</a
         >
       </div>
@@ -653,6 +636,9 @@
               src="https://cambodiatravel.com/images/2020/10/Kampong-Thom-province-cambodia.jpg"
               alt="Cambodian artisan at work"
               class="img-fluid rounded"
+              width="600"
+              height="400"
+              loading="lazy"
             />
           </div>
         </div>
@@ -670,6 +656,9 @@
                 src="https://b3355779.smushcdn.com/3355779/wp-content/uploads/2023/06/suong_violet_1.jpeg?lossy=2&strip=1&webp=1"
                 class="card-img-top"
                 alt="Product 1"
+                width="300"
+                height="400"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title">Handwoven Silk Scarf</h5>
@@ -686,6 +675,9 @@
                 src="https://i.etsystatic.com/21007903/r/il/255fc7/6057082975/il_570xN.6057082975_fmcg.jpg"
                 class="card-img-top"
                 alt="Product 2"
+                width="300"
+                height="400"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title">Carved Wooden Box</h5>
@@ -702,11 +694,14 @@
                 src="https://img.artpal.com/069361/7-20-4-8-3-47-20m.jpg"
                 class="card-img-top"
                 alt="Product 3"
+                width="300"
+                height="400"
+                loading="lazy"
               />
               <div class="card-body">
                 <h5 class="card-title">Angkor Wat Painting</h5>
                 <p class="card-text">
-                  Delicates showcasing traditional art painting of the seven
+                  Delicate showcasing traditional art painting of the seven
                   wonder of the world.
                 </p>
                 <a href="#" class="btn btn-primary">View Details</a>
@@ -728,6 +723,9 @@
               <img
                 src="https://www.thefairtradevillage.com/wp-content/uploads/2019/06/AHA-Official-Seal-of-Authenticity.jpg"
                 alt="Genuine Cambodian handmade gifts"
+                width="300"
+                height="250"
+                loading="lazy"
               />
               <div class="blog-content">
                 <h4>Finding genuine Cambodian handmade gifts</h4>
@@ -746,6 +744,9 @@
               <img
                 src="https://pppenglish.sgp1.digitaloceanspaces.com/image/main/20243/25_3_2024_hol_dgi.jpg"
                 alt="Hol Pidan Exhibition"
+                width="300"
+                height="250"
+                loading="lazy"
               />
               <div class="blog-content">
                 <h4>Hol Pidan Exhibition in Phnom Penh</h4>
@@ -764,6 +765,9 @@
               <img
                 src="https://moitruongdulich.vn/en/mypicture/images/Myfolder/2023/T7/287Traditional-bamboo-weaving-helps-Khmer-people-in-Soc-Trang-escape-poverty-1.jpg"
                 alt="Khmer Handicraft Villages"
+                width="300"
+                height="250"
+                loading="lazy"
               />
               <div class="blog-content">
                 <h4>Expansion of Khmer Handicraft Villages in Vietnam</h4>
@@ -772,7 +776,7 @@
                   Vietnam's Trà Vinh Province, several ethnic Khmer handicraft
                   villages have experienced significant growth. The villages in
                   Đại An and Hàm Giang communes, as well as the sedge mat
-                  weaving village in Hàm Tân,…
+                  weaving village in Hàm Tân, …
                 </p>
                 <button>Read more</button>
               </div>
@@ -838,13 +842,10 @@
       </div>
     </footer>
 
-    <!-- Background Image Changer Script -->
-    <script src="js/script.js"></script>
-
     <!-- Bootstrap JavaScript and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-    <!-- FontAwesome CDN -->
+    <script src="js/script.js"></script>
     <script
       src="https://kit.fontawesome.com/1f1017027a.js"
       crossorigin="anonymous"
