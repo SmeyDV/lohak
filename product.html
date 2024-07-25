@@ -200,6 +200,49 @@
         padding-top: 20px;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
       }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .scale-in {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .scale-in.visible {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .slide-in-left {
+        opacity: 0;
+        transform: translateX(-50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .slide-in-left.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .slide-in-right {
+        opacity: 0;
+        transform: translateX(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .slide-in-right.visible {
+        opacity: 1;
+        transform: translateX(0);
+      }
     </style>
   </head>
   <body>
@@ -260,9 +303,9 @@
     <!-- features -->
     <section id="features" class="text-center py-5">
       <div class="container">
-        <h2 class="mb-4">Product Features</h2>
+        <h2 class="mb-4 fade-in">Product Features</h2>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4 fade-in">
             <i class="fa-solid fa-check fa-3x mb-3"></i>
             <h3>Authentic Artistry</h3>
             <p>
@@ -270,7 +313,7 @@
               hand-carved wooden sculptures.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 fade-in">
             <i class="fa-solid fa-location-dot fa-3x mb-3"></i>
             <h3>Empowering Artisans and Cultural</h3>
             <p>
@@ -278,7 +321,7 @@
               awareness.
             </p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 fade-in">
             <i class="fa-solid fa-heart fa-3x mb-3"></i>
             <h3>User-Friendly Design</h3>
             <p>
@@ -291,9 +334,9 @@
     </section>
     <!-- products -->
     <section id="products" class="container text-center my-5">
-      <h2 class="mb-4">Our Products</h2>
+      <h2 class="mb-4 fade-in">Our Products</h2>
       <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+        <div class="col scale-in">
           <div class="card h-100">
             <div class="card-img-top-container">
               <img
@@ -313,7 +356,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col scale-in">
           <div class="card h-100">
             <div class="card-img-top-container">
               <img
@@ -334,7 +377,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col scale-in">
           <div class="card h-100">
             <div class="card-img-top-container">
               <img
@@ -359,9 +402,9 @@
     </section>
     <!-- testimonials -->
     <section id="testimonials" class="container text-center my-5">
-      <h2 class="mb-4">What Our Customers Say</h2>
+      <h2 class="mb-4 fade-in">What Our Customers Say</h2>
       <div class="row">
-        <div class="col-md-4 testimonial">
+        <div class="col-md-4 testimonial slide-in-left">
           <img
             src="https://d22e6o9mp4t2lx.cloudfront.net/cms/pfp3_d7855f9562.webp"
             alt="Customer 1"
@@ -375,7 +418,7 @@
             <footer class="blockquote-footer">Mark</footer>
           </blockquote>
         </div>
-        <div class="col-md-4 testimonial">
+        <div class="col-md-4 testimonial fade-in">
           <img
             src="https://d22e6o9mp4t2lx.cloudfront.net/cms/pfp5_3be35ab548.jpg"
             alt="Customer 2"
@@ -389,7 +432,7 @@
             <footer class="blockquote-footer">Sofia</footer>
           </blockquote>
         </div>
-        <div class="col-md-4 testimonial">
+        <div class="col-md-4 testimonial slide-in-right">
           <img
             src="https://i0.wp.com/fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/112692698/original/31a5d2469689575beee06ffcf4e9e76abab3abe2/logo-design-for-profile-picture-dessin-pour-photo-de-profil.png"
             alt="Customer 3"
@@ -448,5 +491,25 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- animation for scrolling -->
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const animatedElements = document.querySelectorAll('.fade-in, .scale-in, .slide-in-left, .slide-in-right');
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+
+        animatedElements.forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
   </body>
 </html>

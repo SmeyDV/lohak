@@ -10,8 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <style>
         :root {
@@ -96,7 +101,7 @@
         .btn-submit {
             background-color: var(--accent-color);
             border: none;
-            color: var(--main-color);
+            color: var (--main-color);
             font-weight: 600;
             padding: 12px 30px;
             transition: all 0.3s ease;
@@ -206,7 +211,7 @@
     </nav>
 
     <!-- Contact Header -->
-    <header class="contact-header">
+    <header class="contact-header" data-aos="fade-in">
         <div class="container">
             <h1>Get in Touch</h1>
             <p>We're here to answer any questions you may have about our products, services, or company. Reach out to us
@@ -219,7 +224,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mb-4 mb-lg-0">
-                    <div class="contact-form">
+                    <div class="contact-form" data-aos="fade-right">
                         <h2>Send Us a Message</h2>
                         <form>
                             <div class="row">
@@ -241,7 +246,7 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="contact-info">
+                    <div class="contact-info" data-aos="fade-left">
                         <h2>Contact Information</h2>
                         <div class="contact-info-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -266,7 +271,7 @@
     </section>
 
     <!-- map -->
-    <section class="map">
+    <section class="map" data-aos="fade-up">
         <div class="container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.573492945606!2d104.89540131114863!3d11.582402688572213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109517bf7757d23%3A0x965c34888684bf1!2z4Z6f4Z624Z6A4Z6b4Z6c4Z634Z6R4Z-S4Z6Z4Z624Z6b4Z-Q4Z6Z4Z6i4Z6T4Z-S4Z6P4Z6a4Z6H4Z624Z6P4Z634Z6V4Z624Z6a4Z-J4Z624Z6g4Z-S4Z6C4Z6T!5e0!3m2!1skm!2skh!4v1721746200099!5m2!1skm!2skh"
@@ -275,15 +280,15 @@
         </div>
 
     <!-- Footer -->
-    <footer class="py-5">
+    <footer class="py-5" data-aos="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="fade-up">
                     <h3>About Us</h3>
                     <p>We are dedicated to providing high-quality Cambodian handcrafts while supporting local artisans
                         and promoting fair trade practices.</p>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <h3>Quick Links</h3>
                     <ul class="list-unstyled">
                         <li><a href="index.html">Home</a></li>
@@ -292,7 +297,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -300,7 +305,7 @@
                         <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
-                <div class="col-md-3 mb-4">
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <h3>Contact Us</h3>
                     <p>Email: lohak@example.com</p>
                     <p>Phone: +855 12 345 678</p>
@@ -316,6 +321,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FontAwesome CDN for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
 </body>
 
 </html>
