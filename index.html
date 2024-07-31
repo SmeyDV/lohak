@@ -49,99 +49,50 @@
         font-weight: bold;
         color: white;
       }
-
       .navbar-nav .nav-link {
         font-size: 1.1rem;
         color: var(--text-light);
         transition: color 0.3s ease;
       }
-
       .navbar-nav .nav-link:hover {
         color: var(--accent-color);
       }
-
-      .navbar-nav .btn-outline-light:hover {
-        background-color: var(--main-color);
-        border-color: var(--accent-color);
-      }
-
-      .navbar-nav .btn-outline-light {
-        color: var(--text-light);
-        border-color: var(--text-light);
+      .navbar-toggler {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
       }
       .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        width: 1.5em;
+        height: 1.5em;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
       }
 
-      .navbar-nav .btn-outline-light:hover {
-        border-color: var(--accent-color);
-      }
-
-      .navbar-nav .btn-primary {
-        background-color: var(--main-color);
-        border-color: var (--accent-color);
-        color: #fff;
-      }
-
-      .navbar-nav .btn-primary:hover {
-        background-color: darken(var(--accent-color), 10%);
-        border-color: darken(var(--accent-color), 10%);
-      }
-
-      .navbar-collapse {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .navbar-collapse .d-flex {
-        order: 1;
-        flex-grow: 1;
-        justify-content: center;
-      }
-
-      .navbar-collapse .navbar-nav {
-        order: 2;
-        flex-grow: 0;
-      }
-      .navbar-nav .form-control {
-        border-radius: 0.25rem;
-      }
-
-      .navbar-nav .btn {
+      <!--  -->
+      .login-btn {
         color: var(--text-light);
         border-color: var(--text-light);
+        transition: background-color 0.3s ease, color 0.3s ease,
+          border-color 0.3s ease;
       }
 
-      .navbar-nav .btn:hover {
-        color: var(--accent-color);
+      .login-btn:hover {
+        background-color: var(--main-color);
         border-color: var(--accent-color);
+        color: var(--accent-color);
       }
 
-      @media (max-width: 991.98px) {
-        .navbar-collapse .d-flex {
-          display: none;
-        }
-        .navbar-nav {
-          text-align: center;
-          width: 100%;
-        }
-        .navbar-nav .nav-item {
-          width: 100%;
-        }
-        .navbar-nav .btn-outline-light,
-        .navbar-nav .btn-primary {
-          width: auto;
-          margin: 0.5rem auto;
-          display: block;
-        }
+      /* Signup button styles */
+      .signup-btn {
+        background-color: blue;
+        border-color:white;
+        color: #fff;
+        
       }
-
-      @media (min-width: 992px) {
-        .navbar-nav .btn-outline-light,
-        .navbar-nav .btn-primary {
-          width: auto;
-        }
+      .signup-btn:hover {
+        background-color: darken(var(--accent-color), 10%);
+        
       }
 
       .jumbotron {
@@ -540,6 +491,15 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-none d-lg-flex mx-auto">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
           <ul class="navbar-nav ms-auto ms-lg-0">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
@@ -553,28 +513,23 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
+          </ul>
+          <ul class="navbar-nav ms-auto ms-lg-0 d-none d-lg-flex">
             <li class="nav-item">
               <a
-                class="nav-link btn btn-outline-light me-2"
+                class="nav-link btn btn-outline-light me-2 login-btn"
                 href="loginpage.html"
                 >Login</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link btn btn-primary" href="signuppage.html"
+              <a
+                class="nav-link btn btn-primary signup-btn"
+                href="signuppage.html"
                 >Sign Up</a
               >
             </li>
           </ul>
-          <form class="d-none d-lg-flex mx-auto">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
