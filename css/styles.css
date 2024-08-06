@@ -1,0 +1,117 @@
+:root {
+  --main-color: #0a283f;
+  --accent-color: #ffd700;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--main-color);
+}
+
+.navbar {
+  background-color: var(--main-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}      
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: var(--accent-color);
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+.navbar-toggler-icon {
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+<!--  -->
+.login-btn {
+  color: var(--text-light);
+  border-color: var(--text-light);
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: var(--main-color);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* Signup button styles */
+.signup-btn {
+  background-color: blue;
+  border-color:white;
+  color: #fff;
+  
+}
+.signup-btn:hover {
+  background-color: darken(var(--accent-color), 10%);
+  
+}
+/* Footer styles */
+
+footer {
+  background-color: #061824;
+  padding: 50px 0;
+  color: var(--text-light);
+}
+
+footer h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+footer p,
+footer ul {
+  font-size: 1rem;
+  color: #adb5bd;
+}
+
+footer a {
+  color: #adb5bd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

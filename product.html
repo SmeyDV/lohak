@@ -1,521 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Product</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --main-color: #0a283f;
-        --accent-color: #ffd700;
-        --text-light: #ffffff;
-        --text-dark: #333333;
-      }
-      html, body {
-        overflow-x: hidden;
-      }
-      
 
-      body {
-        font-family: "Poppins", sans-serif;
-        line-height: 1.6;
-        color: var(--text-dark);
-        overflow-x: hidden; /* Prevent horizontal scrolling */
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Product</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .hero {
+      position: relative;
+      background: url("https://www.hotelscombined.com/news/wp-content/uploads/sites/314/2020/10/featured-image-shutterstock_1294346341.jpg") no-repeat center center;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      width: 100%;
+      /* Ensure it doesn't overflow */
+    }
 
-      .navbar {
-        background-color: var(--main-color);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      }
-      .navbar-brand {
-        font-size: 2rem;
-        font-weight: bold;
-        color: white;
-      }
-      .navbar-nav .nav-link {
-        font-size: 1.1rem;
-        color: var(--text-light);
-        transition: color 0.3s ease;
-      }
-      .navbar-nav .nav-link:hover {
-        color: var(--accent-color);
-      }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
 
-      .hero {
-        position: relative;
-        background: url("https://www.hotelscombined.com/news/wp-content/uploads/sites/314/2020/10/featured-image-shutterstock_1294346341.jpg")
-          no-repeat center center;
-        background-size: cover;
-        color: white;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-        width: 100%; /* Ensure it doesn't overflow */
-      }
-      .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-      }
-      .hero .container {
-        position: relative;
-        z-index: 2;
-      }
-      .hero h1,
-      .hero p,
-      .hero .btn {
-        z-index: 2;
-        position: relative;
-        opacity: 0;
-        animation: fadeInUp 0.5s forwards;
-      }
-      .hero h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: var(--accent-color);
-        animation-delay: 0.2s;
-      }
-      .hero .btn-primary {
-        background-color: var(--accent-color);
-        border-color: var(--accent-color);
-        color: var(--main-color);
-        padding: 10px;
-        font-size: 1.2rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-      .hero .btn {
-        color: black;
-      }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
 
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
+    .hero h1,
+    .hero p,
+    .hero .btn {
+      z-index: 2;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 0.5s forwards;
+    }
 
-      #features {
-        padding: 60px 0;
-        background-color: #f8f9fa;
-      }
-      #features h3 {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 1.5rem;
-      }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+      animation-delay: 0.2s;
+    }
 
-      .card-img-top-container {
-        width: 100%;
-        height: 200px;
-        overflow: hidden;
-      }
-      .card-img-top {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    .hero .btn-primary {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      color: var(--main-color);
+      padding: 10px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
 
-      #testimonials {
-        padding: 60px 0;
-        background-color: #ffffff;
-      }
-      #testimonials .testimonial {
-        margin-bottom: 30px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-      }
-      #testimonials .testimonial:hover {
-        transform: translateY(-5px);
-      }
-      #testimonials .testimonial img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      .blockquote {
-        font-size: 1rem;
-        margin-top: 15px;
-      }
-      .blockquote-footer {
-        color: #6c757d;
-        font-size: 0.875rem;
-        margin-top: 10px;
-      }
-      @media (max-width: 768px) {
-        #testimonials .testimonial {
-          margin-bottom: 20px;
-        }
-      }
+    .hero .btn {
+      color: black;
+    }
 
-      footer {
-        background-color: #061824;
-        padding: 50px 0;
-        color: var(--text-light);
-      }
-      footer h3 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 20px;
-        color: var(--accent-color);
-      }
-      footer p,
-      footer ul {
-        font-size: 1rem;
-        color: #adb5bd;
-      }
-      footer a {
-        color: #adb5bd;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      footer a:hover {
-        color: var(--accent-color);
-      }
-      .social-icons a {
-        font-size: 1.5rem;
-        margin-right: 15px;
-      }
-      .footer-bottom {
-        margin-top: 30px;
-        padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .fade-in {
+    @keyframes fadeInUp {
+      from {
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
       }
 
-      .fade-in.visible {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
+    }
 
-      .scale-in {
-        opacity: 0;
-        transform: scale(0.9);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
+    #features {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
 
-      .scale-in.visible {
-        opacity: 1;
-        transform: scale(1);
-      }
+    #features h3 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
 
-      .slide-in-left {
-        opacity: 0;
-        transform: translateX(-50px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
+    .card-img-top-container {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
 
-      .slide-in-left.visible {
-        opacity: 1;
-        transform: translateX(0);
-      }
+    .card-img-top {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-      .slide-in-right {
-        opacity: 0;
-        transform: translateX(50px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
+    #testimonials {
+      padding: 60px 0;
+      background-color: #ffffff;
+    }
 
-      .slide-in-right.visible {
-        opacity: 1;
-        transform: translateX(0);
+    #testimonials .testimonial {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    #testimonials .testimonial:hover {
+      transform: translateY(-5px);
+    }
+
+    #testimonials .testimonial img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .blockquote {
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+
+    .blockquote-footer {
+      color: #6c757d;
+      font-size: 0.875rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      #testimonials .testimonial {
+        margin-bottom: 20px;
       }
-    </style>
-  </head>
-  <body>
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container">
-        <a class="navbar-brand" href="#">Products</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <form class="d-none d-lg-flex mx-auto">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-light" type="submit">Search</button>
-          </form>
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="product.html">Product</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutpage.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
+    }
+
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .slide-in-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .slide-in-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .slide-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Products</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <form class="d-none d-lg-flex mx-auto">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutpage.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="display-4">Discover Our Amazing Product</h1>
+      <p class="lead">
+        Learn more about the features and benefits of our product.
+      </p>
+      <a href="#product-details" class="btn btn-primary btn-lg">Explore More</a>
+    </div>
+  </section>
+  <!-- features -->
+  <section id="features" class="text-center py-5">
+    <div class="container">
+      <h2 class="mb-4 fade-in">Product Features</h2>
+      <div class="row">
+        <div class="col-md-4 fade-in">
+          <i class="fa-solid fa-check fa-3x mb-3"></i>
+          <h3>Authentic Artistry</h3>
+          <p>
+            Authentic Khmer handicrafts, from intricately woven textiles to
+            hand-carved wooden sculptures.
+          </p>
+        </div>
+        <div class="col-md-4 fade-in">
+          <i class="fa-solid fa-location-dot fa-3x mb-3"></i>
+          <h3>Empowering Artisans and Cultural</h3>
+          <p>
+            Help local and empowering local artisans and improving cultural
+            awareness.
+          </p>
+        </div>
+        <div class="col-md-4 fade-in">
+          <i class="fa-solid fa-heart fa-3x mb-3"></i>
+          <h3>User-Friendly Design</h3>
+          <p>
+            Designed with the user in mind, our product is intuitive and easy
+            to use for everyone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- products -->
+  <section id="products" class="container text-center my-5">
+    <h2 class="mb-4 fade-in">Our Products</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col scale-in">
+        <div class="card h-100">
+          <div class="card-img-top-container">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/5f4d612670877e18890aa67d/1670014246155-OY9TBS1BH1L3NFJ1RVUH/cambodianbrac2.jpg?format=1500w"
+              class="card-img-top" alt="Silver Jewelry" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Silver Jewelry</h5>
+            <p class="card-text">
+              Delicate necklaces, cuffs, and earrings made by local artisans
+              are often set with semiprecious gems found in Cambodia.
+            </p>
+            <p class="card-text mt-auto"><strong>Price: $299.99</strong></p>
+            <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col scale-in">
+        <div class="card h-100">
+          <div class="card-img-top-container">
+            <img src="https://www.khmertimeskh.com/wp-content/uploads/2019/07/Rattan-Association-of-Cambodia-3.jpg"
+              class="card-img-top" alt="Rattan Furniture" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Rattan Furniture</h5>
+            <p class="card-text">
+              Durable and stylish furniture made from rattan, including
+              chairs, tables, and storage units, handcrafted using traditional
+              weaving techniques.
+            </p>
+            <p class="card-text mt-auto"><strong>Price: $249.99</strong></p>
+            <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col scale-in">
+        <div class="card h-100">
+          <div class="card-img-top-container">
+            <img
+              src="https://www.triplekangkor.com/wp-content/uploads/2023/08/What-are-the-Cambodian-traditional-textiles.jpg"
+              class="card-img-top" alt="Batik Fabrics" />
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Batik Fabrics</h5>
+            <p class="card-text">
+              Vibrantly colored and patterned batik fabrics, created using a
+              wax-resist dyeing technique, suitable for making clothing,
+              accessories, and home decor items.
+            </p>
+            <p class="card-text mt-auto"><strong>Price: $39.99</strong></p>
+            <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- testimonials -->
+  <section id="testimonials" class="container text-center my-5">
+    <h2 class="mb-4 fade-in">What Our Customers Say</h2>
+    <div class="row">
+      <div class="col-md-4 testimonial slide-in-left">
+        <img src="https://d22e6o9mp4t2lx.cloudfront.net/cms/pfp3_d7855f9562.webp" alt="Customer 1" class="mb-3" />
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            "This product has exceeded my expectations. The quality and
+            performance are unmatched!"
+          </p>
+          <footer class="blockquote-footer">Mark</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4 testimonial fade-in">
+        <img src="https://d22e6o9mp4t2lx.cloudfront.net/cms/pfp5_3be35ab548.jpg" alt="Customer 2" class="mb-3" />
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            "I love how easy it is to use. It has made my life so much
+            easier."
+          </p>
+          <footer class="blockquote-footer">Sofia</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4 testimonial slide-in-right">
+        <img
+          src="https://i0.wp.com/fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/112692698/original/31a5d2469689575beee06ffcf4e9e76abab3abe2/logo-design-for-profile-picture-dessin-pour-photo-de-profil.png"
+          alt="Customer 3" class="mb-3" />
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            "Great customer service and an even better product. Highly
+            recommend!"
+          </p>
+          <footer class="blockquote-footer">John</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h3>About Us</h3>
+          <p>
+            We are dedicated to providing high-quality Cambodian handcrafts
+            while supporting local artisans and promoting fair trade
+            practices.
+          </p>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="aboutpage.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-      </div>
-    </nav>
-    <!-- hero -->
-    <section class="hero">
-      <div class="container">
-        <h1 class="display-4">Discover Our Amazing Product</h1>
-        <p class="lead">
-          Learn more about the features and benefits of our product.
-        </p>
-        <a href="#product-details" class="btn btn-primary btn-lg"
-          >Explore More</a
-        >
-      </div>
-    </section>
-    <!-- features -->
-    <section id="features" class="text-center py-5">
-      <div class="container">
-        <h2 class="mb-4 fade-in">Product Features</h2>
-        <div class="row">
-          <div class="col-md-4 fade-in">
-            <i class="fa-solid fa-check fa-3x mb-3"></i>
-            <h3>Authentic Artistry</h3>
-            <p>
-              Authentic Khmer handicrafts, from intricately woven textiles to
-              hand-carved wooden sculptures.
-            </p>
+        <div class="col-md-3 mb-4">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
           </div>
-          <div class="col-md-4 fade-in">
-            <i class="fa-solid fa-location-dot fa-3x mb-3"></i>
-            <h3>Empowering Artisans and Cultural</h3>
-            <p>
-              Help local and empowering local artisans and improving cultural
-              awareness.
-            </p>
-          </div>
-          <div class="col-md-4 fade-in">
-            <i class="fa-solid fa-heart fa-3x mb-3"></i>
-            <h3>User-Friendly Design</h3>
-            <p>
-              Designed with the user in mind, our product is intuitive and easy
-              to use for everyone.
-            </p>
-          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h3>Contact Us</h3>
+          <p>Email: lohak@example.com</p>
+          <p>Phone: +855 12 345 678</p>
         </div>
       </div>
-    </section>
-    <!-- products -->
-    <section id="products" class="container text-center my-5">
-      <h2 class="mb-4 fade-in">Our Products</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col scale-in">
-          <div class="card h-100">
-            <div class="card-img-top-container">
-              <img
-                src="https://images.squarespace-cdn.com/content/v1/5f4d612670877e18890aa67d/1670014246155-OY9TBS1BH1L3NFJ1RVUH/cambodianbrac2.jpg?format=1500w"
-                class="card-img-top"
-                alt="Silver Jewelry"
-              />
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Silver Jewelry</h5>
-              <p class="card-text">
-                Delicate necklaces, cuffs, and earrings made by local artisans
-                are often set with semiprecious gems found in Cambodia.
-              </p>
-              <p class="card-text mt-auto"><strong>Price: $299.99</strong></p>
-              <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col scale-in">
-          <div class="card h-100">
-            <div class="card-img-top-container">
-              <img
-                src="https://www.khmertimeskh.com/wp-content/uploads/2019/07/Rattan-Association-of-Cambodia-3.jpg"
-                class="card-img-top"
-                alt="Rattan Furniture"
-              />
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Rattan Furniture</h5>
-              <p class="card-text">
-                Durable and stylish furniture made from rattan, including
-                chairs, tables, and storage units, handcrafted using traditional
-                weaving techniques.
-              </p>
-              <p class="card-text mt-auto"><strong>Price: $249.99</strong></p>
-              <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
-            </div>
-          </div>
-        </div>
-        <div class="col scale-in">
-          <div class="card h-100">
-            <div class="card-img-top-container">
-              <img
-                src="https://www.triplekangkor.com/wp-content/uploads/2023/08/What-are-the-Cambodian-traditional-textiles.jpg"
-                class="card-img-top"
-                alt="Batik Fabrics"
-              />
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Batik Fabrics</h5>
-              <p class="card-text">
-                Vibrantly colored and patterned batik fabrics, created using a
-                wax-resist dyeing technique, suitable for making clothing,
-                accessories, and home decor items.
-              </p>
-              <p class="card-text mt-auto"><strong>Price: $39.99</strong></p>
-              <a href="#" class="btn btn-primary mt-2">Add to Cart</a>
-            </div>
-          </div>
-        </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2024 Lohak Handcraft Market. All rights reserved.</p>
       </div>
-    </section>
-    <!-- testimonials -->
-    <section id="testimonials" class="container text-center my-5">
-      <h2 class="mb-4 fade-in">What Our Customers Say</h2>
-      <div class="row">
-        <div class="col-md-4 testimonial slide-in-left">
-          <img
-            src="https://d22e6o9mp4t2lx.cloudfront.net/cms/pfp3_d7855f9562.webp"
-            alt="Customer 1"
-            class="mb-3"
-          />
-          <blockquote class="blockquote">
-            <p class="mb-0">
-              "This product has exceeded my expectations. The quality and
-              performance are unmatched!"
-            </p>
-            <footer class="blockquote-footer">Mark</footer>
-          </blockquote>
-        </div>
-        <div class="col-md-4 testimonial fade-in">
-          <img
-            src="https://d22e6o9mp4t2lx.cloudfront.net/cms/pfp5_3be35ab548.jpg"
-            alt="Customer 2"
-            class="mb-3"
-          />
-          <blockquote class="blockquote">
-            <p class="mb-0">
-              "I love how easy it is to use. It has made my life so much
-              easier."
-            </p>
-            <footer class="blockquote-footer">Sofia</footer>
-          </blockquote>
-        </div>
-        <div class="col-md-4 testimonial slide-in-right">
-          <img
-            src="https://i0.wp.com/fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/112692698/original/31a5d2469689575beee06ffcf4e9e76abab3abe2/logo-design-for-profile-picture-dessin-pour-photo-de-profil.png"
-            alt="Customer 3"
-            class="mb-3"
-          />
-          <blockquote class="blockquote">
-            <p class="mb-0">
-              "Great customer service and an even better product. Highly
-              recommend!"
-            </p>
-            <footer class="blockquote-footer">John</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-    <!-- footer -->
-    <footer class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 mb-4">
-            <h3>About Us</h3>
-            <p>
-              We are dedicated to providing high-quality Cambodian handcrafts
-              while supporting local artisans and promoting fair trade
-              practices.
-            </p>
-          </div>
-          <div class="col-md-3 mb-4">
-            <h3>Quick Links</h3>
-            <ul class="list-unstyled">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="#products">Products</a></li>
-              <li><a href="aboutpage.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-4">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
-          </div>
-          <div class="col-md-3 mb-4">
-            <h3>Contact Us</h3>
-            <p>Email: lohak@example.com</p>
-            <p>Phone: +855 12 345 678</p>
-          </div>
-        </div>
-        <div class="footer-bottom text-center">
-          <p>&copy; 2024 Lohak Handcraft Market. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <!-- animation for scrolling -->
-    <script>
-      document.addEventListener('DOMContentLoaded', (event) => {
-        const animatedElements = document.querySelectorAll('.fade-in, .scale-in, .slide-in-left, .slide-in-right');
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <!-- animation for scrolling -->
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const animatedElements = document.querySelectorAll('.fade-in, .scale-in, .slide-in-left, .slide-in-right');
 
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-            }
-          });
-        }, {
-          threshold: 0.1
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
         });
-
-        animatedElements.forEach(el => {
-          observer.observe(el);
-        });
+      }, {
+        threshold: 0.1
       });
-    </script>
-  </body>
+
+      animatedElements.forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+
 </html>
