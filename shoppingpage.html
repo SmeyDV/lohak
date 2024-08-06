@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="" />
+    <title>Document</title>
+    <style>
+      .col-6 > a {
+        display: block;
+      }
+
+      #shop-btn {
+        background-color: #ff8100;
+      }
+
+      #card-width {
+        width: 18rem;
+      }
+
+      .filter-bar {
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+
+      .filter-section {
+        margin-bottom: 20px;
+      }
+
+      .filter-section h5 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .filter-section label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        font-size: 14px;
+      }
+
+      .filter-section label input {
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      .product-image {
+        object-fit: contain;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+      }
+
+      .product-image:hover {
+        transform: scale(1.05);
+        /* This scales the image up slightly on hover */
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand font-custom" href="products">Products</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form id="search-form" class="d-none d-lg-flex mx-auto">
+            <input
+              id="search-input"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutpage.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-2 col-12">
+          <div class="filter-bar">
+            <div class="filter-section">
+              <h5>Types of Product</h5>
+              <label
+                ><input type="checkbox" class="filter" data-filter="jewelry" />
+                Jewelry</label
+              ><br />
+              <label
+                ><input type="checkbox" class="filter" data-filter="figurine" />
+                Figurine</label
+              ><br />
+              <label
+                ><input type="checkbox" class="filter" data-filter="silk" />
+                Silk</label
+              ><br />
+              <label
+                ><input
+                  type="checkbox"
+                  class="filter"
+                  data-filter="wooden carving"
+                />
+                Wooden Carving</label
+              ><br />
+              <label
+                ><input type="checkbox" class="filter" data-filter="ceramic" />
+                Ceramic</label
+              >
+            </div>
+            <div class="filter-section">
+              <h5>Price</h5>
+              <label
+                ><input type="checkbox" class="filter" data-filter="price-1" />
+                $3 - $100</label
+              ><br />
+              <label
+                ><input type="checkbox" class="filter" data-filter="price-2" />
+                $100 - $500</label
+              ><br />
+              <label
+                ><input type="checkbox" class="filter" data-filter="price-3" />
+                $500 - $1000</label
+              ><br />
+              <label
+                ><input type="checkbox" class="filter" data-filter="price-4" />
+                $1000 - $3600</label
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10 col-12">
+          <div class="product-item">
+            <!-- Products will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5" data-aos="fade-up">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 mb-4" data-aos="fade-up">
+            <h3>About Us</h3>
+            <p>
+              We are dedicated to providing high-quality Cambodian handcrafts
+              while supporting local artisans and promoting fair trade
+              practices.
+            </p>
+          </div>
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h3>Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="product.html">Products</a></li>
+              <li><a href="aboutpage.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <h3>Contact Us</h3>
+            <p>Email: lohak@example.com</p>
+            <p>Phone: +855 12 345 678</p>
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
+          <p>&copy; 2024 Lohak Handcraft Market. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+      const displayProducts = (products) => {
+        const productContainer = document.querySelector(".product-item");
+        productContainer.innerHTML = "";
+
+        // Create a row div to wrap the product cards
+        const rowDiv = document.createElement("div");
+        rowDiv.classList.add("row", "g-3", "d-flex", "justify-content-evenly");
+
+        products.forEach((product) => {
+          const productHTML = `
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card pt-2 pb-2" id="card-width">
+                           <img class="product-image" alt="${
+                             product.title
+                           }" src="${
+            product.image
+          }" width="100%" height="240px">
+                            <div class="card-body">
+                                <hr>
+                                <h5 class="card-title product-description">$${product.price.toFixed(
+                                  2
+                                )}</h5>
+                                <h6 class="card-subtitle mb-2 text-muted product-title">${
+                                  product.title
+                                }</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">${
+                                  product.description
+                                }</h6>
+                                <a href="#" role="button" class="btn btn-primary card-link py-2 px-4">Add to cart</a>
+                                <a title="Add to cart" href="#" class="btn btn-outline-primary card-link"> <i class="fa-solid fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+          rowDiv.innerHTML += productHTML;
+        });
+
+        // Append the row to the product container
+        productContainer.appendChild(rowDiv);
+      };
+
+      // Function to filter products based on selected filters and search input
+      const filterProducts = () => {
+        const checkboxes = document.querySelectorAll(".filter:checked");
+        const selectedFilters = Array.from(checkboxes).map(
+          (checkbox) => checkbox.dataset.filter
+        );
+        const searchInput = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        let filteredProducts = products;
+
+        if (selectedFilters.length > 0) {
+          filteredProducts = products.filter((product) => {
+            return (
+              selectedFilters.includes(product.category) ||
+              selectedFilters.some((filter) => {
+                if (filter.startsWith("price-")) {
+                  const priceRange = filter.split("-")[1];
+                  switch (priceRange) {
+                    case "1":
+                      return product.price >= 3 && product.price <= 100;
+                    case "2":
+                      return product.price > 100 && product.price <= 500;
+                    case "3":
+                      return product.price > 500 && product.price <= 1000;
+                    case "4":
+                      return product.price > 1000 && product.price <= 3600;
+                    default:
+                      return true;
+                  }
+                }
+                return false;
+              })
+            );
+          });
+        }
+
+        // Filter based on search input
+        if (searchInput) {
+          filteredProducts = filteredProducts.filter((product) => {
+            return (
+              product.title.toLowerCase().includes(searchInput) ||
+              product.description.toLowerCase().includes(searchInput)
+            );
+          });
+        }
+
+        displayProducts(filteredProducts);
+      };
+
+      // Event listeners for checkboxes and search input
+      const checkboxes = document.querySelectorAll(".filter");
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", filterProducts);
+      });
+
+      const searchInput = document.getElementById("search-input");
+      searchInput.addEventListener("input", filterProducts);
+
+      // Prevent form submission on Enter key press
+      const searchForm = document.getElementById("search-form");
+      searchForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        filterProducts();
+      });
+
+      // Initial display of products
+      displayProducts(products);
+    </script>
+  </body>
+</html>
