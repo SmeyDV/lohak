@@ -12,6 +12,8 @@
       rel="stylesheet"
     />
     <title>Cart</title>
+    <link rel="icon" type="image/png" href="pic/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
     <style>
       .cart-item {
         border: 1px solid #ddd;
@@ -49,12 +51,40 @@
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        margin-bottom: 20px;
+        
       }
     </style>
   </head>
   <body>
+     <!-- navbar -->
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+        <a class="navbar-brand font-custom" href="#">Your Cart</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+           
+            <ul class="navbar-nav ms-auto ms-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutpage.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
     <div class="container mt-4">
-      <h1>Shopping Cart</h1>
       <div id="cart-items" class="mt-4"></div>
       <div class="cart-summary">
         <h3>Total: $<span id="total-price">0.00</span></h3>
@@ -69,5 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <script src="js/cart.js"></script>
+
   </body>
+  
 </html>

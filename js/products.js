@@ -307,3 +307,6 @@ const addToCart = (productId) => {
   document.addEventListener("DOMContentLoaded", updateCartCount);
   
   
+  
+  
+  

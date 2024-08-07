@@ -101,10 +101,12 @@
 #team .card h5 {
   margin-bottom: 10px;
   font-weight: 600;
+
 }
 
 #team .card p {
   color: var(--text-color);
+  text-align: left;
 }
 
 #team .card .role {
