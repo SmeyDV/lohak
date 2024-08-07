@@ -289,3 +289,21 @@ const products = [
       category: 'figurine'
   }
 ];
+
+
+const addToCart = (productId) => {
+    const product = products.find((p) => p.id === productId);
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+  };
+  
+  const updateCartCount = () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cart-count").textContent = cart.length;
+  };
+  
+  document.addEventListener("DOMContentLoaded", updateCartCount);
+  
+  
