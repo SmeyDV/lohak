@@ -4,11 +4,14 @@
   --text-light: #ffffff;
   --text-dark: #333333;
 }
-
+html{
+  overflow-x: hidden;
+}
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
+  overflow-x: hidden;
 }
 
 h1,

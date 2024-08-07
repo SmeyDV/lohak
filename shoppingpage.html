@@ -40,7 +40,7 @@
 
       .filter-section h5 {
         margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: bold;
       }
 
@@ -48,7 +48,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 5px;
-        font-size: 14px;
+        font-size: 16px;
       }
 
       .filter-section label input {
@@ -68,7 +68,6 @@
       }
     </style>
   </head>
-
   <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -150,19 +149,19 @@
               <h5>Price</h5>
               <label
                 ><input type="checkbox" class="filter" data-filter="price-1" />
-                $3 - $100</label
+                $30 - $50</label
               ><br />
               <label
                 ><input type="checkbox" class="filter" data-filter="price-2" />
-                $100 - $500</label
+                $50 - $100</label
               ><br />
               <label
                 ><input type="checkbox" class="filter" data-filter="price-3" />
-                $500 - $1000</label
+                $100 - $300</label
               ><br />
               <label
                 ><input type="checkbox" class="filter" data-filter="price-4" />
-                $1000 - $3600</label
+                $300+</label
               >
             </div>
           </div>
@@ -211,7 +210,7 @@
           </div>
         </div>
         <div class="footer-bottom text-center">
-          <p>&copy; 2024 Lohak Handcraft Market. All rights reserved.</p>
+          <p>© 2024 Lohak Handcraft Market. All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -238,7 +237,7 @@
           }" width="100%" height="240px">
                             <div class="card-body">
                                 <hr>
-                                <h5 class="card-title product-description">$${product.price.toFixed(
+                                <h5 class="card-title product-description">${product.price.toFixed(
                                   2
                                 )}</h5>
                                 <h6 class="card-subtitle mb-2 text-muted product-title">${
@@ -280,13 +279,13 @@
                   const priceRange = filter.split("-")[1];
                   switch (priceRange) {
                     case "1":
-                      return product.price >= 3 && product.price <= 100;
+                      return product.price >= 30 && product.price <= 50;
                     case "2":
-                      return product.price > 100 && product.price <= 500;
+                      return product.price > 50 && product.price <= 100;
                     case "3":
-                      return product.price > 500 && product.price <= 1000;
+                      return product.price > 100 && product.price <= 300;
                     case "4":
-                      return product.price > 1000 && product.price <= 3600;
+                      return product.price > 300;
                     default:
                       return true;
                   }
@@ -329,5 +328,5 @@
       // Initial display of products
       displayProducts(products);
     </script>
-  </body>
+  </body>  </body>
 </html>
