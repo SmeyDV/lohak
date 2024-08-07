@@ -35,7 +35,7 @@ const displayWishlist = () => {
   const productsHTML = wishlist.map((product) => `
     <div class="col-md-4 d-flex justify-content-center">
       <div class="card pt-2 pb-2" id="card-width">
-        <img class="product-image" alt="${product.title}" src="${product.image}" width="100%" height="240px">
+        <img class="product-image" alt="${product.title}" src="${product.image}" width="100%" height="150px">
         <div class="card-body">
           <hr>
           <h5 class="card-title product-description">${product.price.toFixed(2)}</h5>
