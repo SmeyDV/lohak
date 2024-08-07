@@ -65,6 +65,10 @@
     .product-image:hover {
       transform: scale(1.05);
     }
+    .pagination-container {
+      margin-top: 30px; /* Add desired top margin */
+      margin-bottom: 30px; /* Add desired bottom margin */
+    }
   </style>
 </head>
 <body>
@@ -142,7 +146,7 @@
         <div class="product-item">
           <!-- Products will be displayed here -->
         </div>
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Page navigation example" class="pagination-container">
           <ul class="pagination justify-content-center">
             <li class="page-item">
               <a class="page-link" href="#" aria-label="Previous" id="prev-page">
@@ -157,6 +161,7 @@
             </li>
           </ul>
         </nav>
+        
       </div>
     </div>
   </div>
