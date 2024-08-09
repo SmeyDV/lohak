@@ -18,33 +18,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/contact.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg ">
-        <div class="container">
-            <a class="navbar-brand font-custom" href="contact.html">Contact</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="aboutpage.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Navbar -->
+    <?php include 'components/navbar.php';
+    ?>
+
     <!-- Contact Header -->
     <header class="contact-header" data-aos="fade-in">
         <div class="container">
@@ -112,43 +91,9 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <!-- Footer -->
-        <footer class="py-5" data-aos="fade-up">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 mb-4" data-aos="fade-up">
-                        <h3>About Us</h3>
-                        <p>We are dedicated to providing high-quality Cambodian handcrafts while supporting local
-                            artisans
-                            and promoting fair trade practices.</p>
-                    </div>
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
-                        <h3>Quick Links</h3>
-                        <ul class="list-unstyled">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="aboutpage.html">About</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                        <h3>Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-                        <h3>Contact Us</h3>
-                        <p>Email: lohak@example.com</p>
-                        <p>Phone: +855 12 345 678</p>
-                    </div>
-                </div>
-                <div class="footer-bottom text-center">
-                    <p>&copy; 2024 Lohak Handcraft Market. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
+        <?php include 'components/footer.php'; ?>
+
+        
         <!-- Bootstrap JS CDN -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- FontAwesome CDN for icons -->
